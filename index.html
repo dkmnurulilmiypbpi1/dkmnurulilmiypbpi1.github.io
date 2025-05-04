@@ -902,30 +902,25 @@
                         if (todayData && todayData.timings) {
                             // Validate timings before updating
                             const validatedTimings = validateTimings(todayData.timings, defaultPrayerTimes);
-                            updateHeroPrayerTimes(validatedTimings);
                             highlightCurrentPrayer(validatedTimings);
                         } else {
                             // Use default times if today's data is missing
-                            updateHeroPrayerTimes(defaultPrayerTimes);
                             highlightCurrentPrayer(defaultPrayerTimes);
                         }
                     } else {
                         // Use default times if today's index is out of range
-                        updateHeroPrayerTimes(defaultPrayerTimes);
                         highlightCurrentPrayer(defaultPrayerTimes);
                     }
                     return data.data; // Return full month data for the table
                 } else {
                     console.error("Failed to fetch prayer times:", data.status || 'Unknown error');
                     // Use default times
-                    updateHeroPrayerTimes(defaultPrayerTimes);
                     highlightCurrentPrayer(defaultPrayerTimes);
                     return null;
                 }
             } catch (error) {
                 console.error("Error fetching prayer times:", error);
                 // Use default times
-                updateHeroPrayerTimes(defaultPrayerTimes);
                 highlightCurrentPrayer(defaultPrayerTimes);
                 return null;
             }
@@ -942,53 +937,6 @@
                 }
                 return validated;
             }
-        }
-
-        function updateHeroPrayerTimes(timings) {
-            // Update the prayer times in the hero section
-            const container = document.getElementById('prayer-times-container');
-            const prayerTimeElements = container.querySelectorAll('.prayer-time');
-
-            // Map of prayer names to their corresponding elements
-            const prayers = [
-                { name: 'Fajr', element: prayerTimeElements[0] },
-                { name: 'Sunrise', element: prayerTimeElements[1] },
-                { name: 'Dhuhr', element: prayerTimeElements[2] },
-                { name: 'Asr', element: prayerTimeElements[3] },
-                { name: 'Maghrib', element: prayerTimeElements[4] },
-                { name: 'Isha', element: prayerTimeElements[5] }
-            ];
-
-            // Default prayer times if API fails
-            const defaultTimes = {
-                'Fajr': '5:30',
-                'Sunrise': '6:45',
-                'Dhuhr': '12:30',
-                'Asr': '3:45',
-                'Maghrib': '6:20',
-                'Isha': '8:00'
-            };
-
-            // Update each prayer time
-            prayers.forEach(prayer => {
-                const timeElement = prayer.element.querySelector('.text-white');
-                if (!timeElement) return;
-
-                // Use API time if available, otherwise use default
-                if (timings && timings[prayer.name]) {
-                    try {
-                        // Extract time from API format (e.g., "04:30 (WIB)" to "04:30")
-                        const timeStr = timings[prayer.name].split(' ')[0];
-                        timeElement.textContent = formatTime(timeStr);
-                    } catch (error) {
-                        // If there's an error parsing the API time, use default
-                        timeElement.textContent = formatTime(defaultTimes[prayer.name]);
-                    }
-                } else {
-                    // Use default time if API data is missing
-                    timeElement.textContent = formatTime(defaultTimes[prayer.name]);
-                }
-            });
         }
 
         function formatTime(timeString) {
@@ -1270,7 +1218,6 @@
                             // Update hero section prayer times
                             const today = new Date().getDate() - 1;
                             if (prayerData[today] && prayerData[today].timings) {
-                                updateHeroPrayerTimes(prayerData[today].timings);
                                 highlightCurrentPrayer(prayerData[today].timings);
                             }
 
