@@ -97,6 +97,32 @@
         .hover\:underline-animation:hover::after {
             width: 100%;
         }
+
+        /* Transparent Ayat Container */
+        .ayat-container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.05) 100%);
+            backdrop-filter: blur(5px);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+        }
+
+        /* Adjust Arabic Text Alignment */
+        .arabic-text {
+            direction: rtl;
+            text-align: right;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        /* Slimmer Layout */
+        .hero-ayat {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-top: 3.5rem;
+        }
     </style>
 </head>
 
@@ -172,9 +198,9 @@
     </div>
     <!-- Hero Section -->
     <section id="home" class="pt-16 pb-24 md:pt-24 md:pb-32 relative overflow-hidden" aria-labelledby="hero-heading">
-        <div class="absolute inset-0 islamic-pattern"
-            style="background-image: url('https://img.freepik.com/free-photo/al-maghfirah-mosque-uae-with-its-domes-towers-clear-sky_181624-27600.jpg?t=st=1746113204~exp=1746116804~hmac=793507acc71b6e7e3fd24f0e634f4573ea5fd255fbcf9be52b03801ff71faaaf&w=1380');"
-            role="img" aria-label="Mosque background pattern"></div>
+        <div class="absolute inset-0 " style="background-image: url('https://img.freepik.com/free-photo/al-maghfirah-mosque-uae-with-its-domes-towers-clear-sky_181624-27600.jpg?t=st=1746373305~exp=1746376905~hmac=6810bbd03fb8985641b0830734f03c0ab1d32dfa6924ad4da7a24f08089bc122&w=1380');
+            background-size: cover;
+            background-position: center;" role="img" aria-label="Mosque background pattern"></div>
         <div class="hero-overlay absolute inset-0 bg-black opacity-50"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex items-center justify-center">
             <div class="md:flex md:items-center md:justify-between w-full">
@@ -210,41 +236,23 @@
                         </a>
                     </div>
                 </div>
-                <div
-                    class="md:w-1/2 mt-12 bg-secondary bg-opacity-50 rounded-xl p-6 backdrop-filter backdrop-blur-sm border border-accent border-opacity-20">
-                    <h3 class="text-xl font-heading font-semibold text-white mb-4 flex items-center">
-                        <i class="fas fa-praying-hands mr-3 text-accent" aria-hidden="true"></i>
-                        Today's Prayer Times
-                    </h3>
-                    <div id="prayer-times-container" class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
-                            <div class="text-accent text-sm">Fajr</div>
-                            <div class="text-white text-xl font-medium">5:30 AM</div>
+                <div class="hero-ayat">
+                    <div class="ayat-container">
+                        <h3 class="text-xl font-heading font-semibold text-white mb-8 flex items-center">
+                            <i class="fas fa-book-quran mr-3 text-white"></i>
+                            Ayat Harian
+                        </h3>
+
+                        <div class="arabic-text text-2xl text-white text-right leading-loose mb-6 mr-20">
+                            وَلَا تَقْرَبُوا الزِّنٰىٓ اِنَّهٗ كَانَ فَاحِشَةًۗ وَسَاۤءَ سَبِيْلًا ۝٣٢
                         </div>
-                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
-                            <div class="text-accent text-sm">Sunrise</div>
-                            <div class="text-white text-xl font-medium">6:45 AM</div>
+                        <div class="text-highlight text-center mb-4">
+                            "Janganlah kamu mendekati zina. Sesungguhnya (zina) itu adalah perbuatan keji dan jalan
+                            terburuk."
                         </div>
-                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
-                            <div class="text-accent text-sm">Dhuhr</div>
-                            <div class="text-white text-xl font-medium">12:30 PM</div>
+                        <div class="text-white text-center text-sm">
+                            QS. Al-Isra' 17:32
                         </div>
-                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
-                            <div class="text-accent text-sm">Asr</div>
-                            <div class="text-white text-xl font-medium">3:45 PM</div>
-                        </div>
-                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
-                            <div class="text-accent text-sm">Maghrib</div>
-                            <div class="text-white text-xl font-medium">6:20 PM</div>
-                        </div>
-                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
-                            <div class="text-accent text-sm">Isha</div>
-                            <div class="text-white text-xl font-medium">8:00 PM</div>
-                        </div>
-                    </div>
-                    <div class="mt-4 text-sm text-accent">
-                        <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>
-                        <span id="prayer-location">Loading your location...</span>
                     </div>
                 </div>
             </div>
@@ -361,7 +369,7 @@
                 <!-- Event 2 -->
                 <div class="event-card bg-secondary rounded-xl overflow-hidden transition duration-300 hover:shadow-lg">
                     <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1603908030630-6b3b7014cac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        <img src="https://img.freepik.com/free-photo/muslim-travel-putrajaya-architecture-building_1122-1626.jpg?uid=R54603640&ga=GA1.1.76332340.1742036536&semt=ais_hybrid&w=740"
                             alt="Quran class" class="w-full h-full object-cover">
                         <div
                             class="absolute top-4 left-4 bg-accent text-primary px-3 py-1 rounded-full text-xs font-medium">
@@ -606,7 +614,7 @@
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <!-- Contoh Gambar -->
                 <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1560303253-2d1a481b01c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                    <img src="https://img.freepik.com/free-photo/muslim-travel-putrajaya-architecture-building_1122-1626.jpg?uid=R54603640&ga=GA1.1.76332340.1742036536&semt=ais_hybrid&w=740"
                         alt="Interior Masjid" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
                 </div>
                 <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
@@ -618,7 +626,7 @@
                         alt="Kajian Islam" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
                 </div>
                 <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1603908030630-6b3b7014cac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    <img src="https://img.freepik.com/free-photo/vertical-shot-lovely-istanbul-mosque-with-dome-roof-beautiful-cloudy-sky-with-birds_181624-49820.jpg?uid=R54603640&ga=GA1.1.76332340.1742036536&semt=ais_hybrid&w=740"
                         alt="Kelas Al-Qur'an" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
                 </div>
             </div>
