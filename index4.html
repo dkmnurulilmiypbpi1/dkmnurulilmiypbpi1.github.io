@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Noor Mosque | Islamic Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111827',
+                        secondary: '#374151',
+                        accent: '#9ca3af',
+                        highlight: '#e5e7eb',
+                    },
+                    fontFamily: {
+                        arabic: ['"Amiri"', 'serif'],
+                        heading: ['"Poppins"', 'sans-serif'],
+                        body: ['"Open Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        .islamic-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23374151' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            direction: rtl;
+        }
+
+        .prayer-active {
+            background-color: #374151;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-hidden {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        .mobile-menu-visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.7));
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .hover\:underline-animation {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hover\:underline-animation::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #ffff;
+            transition: width 0.3s ease;
+        }
+
+        .hover\:underline-animation:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-primary text-gray-100 font-body">
+    <!-- Navigation -->
+    <nav class="bg-primary border-b border-secondary fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-mosque text-accent text-2xl mr-2"></i>
+                        <span class="text-xl font-heading font-semibold text-white">Al-Noor Mosque</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#home"
+                            class="text-highlight hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about"
+                            class="text-accent hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#events"
+                            class="text-accent hover:text-white px-3 py-2 rounded-md text-sm font-medium">Events</a>
+                        <a href="#quran"
+                            class="text-accent hover:text-white px-3 py-2 rounded-md text-sm font-medium">Quran</a>
+                        <a href="#prayer"
+                            class="text-accent hover:text-white px-3 py-2 rounded-md text-sm font-medium">Prayer
+                            Times</a>
+                        <a href="#gallery"
+                            class="text-accent hover:text-white px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                        <a href="#contact"
+                            class="text-accent hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-accent hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="mobile-menu mobile-menu-hidden md:hidden fixed inset-0 z-40 bg-primary bg-opacity-95 h-screen w-full pt-20 px-4">
+        <div class="flex flex-col space-y-4">
+            <a href="#home"
+                class="text-highlight hover:text-white px-3 py-4 rounded-md text-lg font-medium border-b border-secondary">Home</a>
+            <a href="#about"
+                class="text-accent hover:text-white px-3 py-4 rounded-md text-lg font-medium border-b border-secondary">About</a>
+            <a href="#events"
+                class="text-accent hover:text-white px-3 py-4 rounded-md text-lg font-medium border-b border-secondary">Events</a>
+            <a href="#quran"
+                class="text-accent hover:text-white px-3 py-4 rounded-md text-lg font-medium border-b border-secondary">Quran</a>
+            <a href="#prayer"
+                class="text-accent hover:text-white px-3 py-4 rounded-md text-lg font-medium border-b border-secondary">Prayer
+                Times</a>
+            <a href="#gallery"
+                class="text-accent hover:text-white px-3 py-4 rounded-md text-lg font-medium border-b border-secondary">Gallery</a>
+            <a href="#contact"
+                class="text-accent hover:text-white px-3 py-4 rounded-md text-lg font-medium border-b border-secondary">Contact</a>
+            <button id="close-mobile-menu" class="mt-8 text-accent hover:text-white text-lg font-medium">
+                <i class="fas fa-times mr-2"></i> Close Menu
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 pb-24 md:pt-24 md:pb-32 relative overflow-hidden">
+        <div class="absolute inset-0 islamic-pattern"
+            style="background-image: url('https://img.freepik.com/free-photo/al-maghfirah-mosque-uae-with-its-domes-towers-clear-sky_181624-27600.jpg?t=st=1746113204~exp=1746116804~hmac=793507acc71b6e7e3fd24f0e634f4573ea5fd255fbcf9be52b03801ff71faaaf&w=1380');">
+        </div>
+        <div class="hero-overlay absolute inset-0 bg-black opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex items-center justify-center">
+            <div class="md:flex md:items-center md:justify-between w-full">
+                <div class="md:w-1/2 mb-12 mt-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-4">
+                        <span class="text-white">Al-Noor</span>
+                        <span class="text-accent">Mosque</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-highlight mb-8 max-w-lg">
+                        A center for faith, knowledge, and community in the heart of the city.
+                    </p>
+                    <div class="mb-8">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-calendar-alt text-accent mr-3"></i>
+                            <span id="current-date" class="text-highlight text-lg"></span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-accent mr-3"></i>
+                            <span id="current-time" class="text-highlight text-lg"></span>
+                            <span class="text-accent ml-2 text-sm" id="hijri-date"></span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#about"
+                            class="bg-accent hover:bg-highlight text-primary font-medium py-3 px-6 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                        <a href="#contact"
+                            class="border-2 border-accent text-accent hover:bg-accent hover:text-primary font-medium py-3 px-6 rounded-lg transition duration-300">
+                            Visit Us
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="md:w-1/2 mt-12 bg-secondary bg-opacity-50 rounded-xl p-6 backdrop-filter backdrop-blur-sm border border-accent border-opacity-20">
+                    <h3 class="text-xl font-heading font-semibold text-white mb-4 flex items-center">
+                        <i class="fas fa-praying-hands mr-3 text-accent"></i>
+                        Today's Prayer Times
+                    </h3>
+                    <div id="prayer-times-container" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <!-- Prayer times will be loaded here by JavaScript -->
+                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
+                            <div class="text-accent text-sm">Fajr</div>
+                            <div class="text-white text-xl font-medium">5:30 AM</div>
+                        </div>
+                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
+                            <div class="text-accent text-sm">Sunrise</div>
+                            <div class="text-white text-xl font-medium">6:45 AM</div>
+                        </div>
+                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
+                            <div class="text-accent text-sm">Dhuhr</div>
+                            <div class="text-white text-xl font-medium">12:30 PM</div>
+                        </div>
+                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
+                            <div class="text-accent text-sm">Asr</div>
+                            <div class="text-white text-xl font-medium">3:45 PM</div>
+                        </div>
+                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
+                            <div class="text-accent text-sm">Maghrib</div>
+                            <div class="text-white text-xl font-medium">6:20 PM</div>
+                        </div>
+                        <div class="prayer-time bg-secondary rounded-lg p-4 transition duration-300">
+                            <div class="text-accent text-sm">Isha</div>
+                            <div class="text-white text-xl font-medium">8:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-sm text-accent">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        <span id="prayer-location">Loading your location...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                    <span class="text-accent">About</span> Our Mosque
+                </h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <div class="relative rounded-xl overflow-hidden h-80 md:h-96">
+                        <div class="absolute inset-0 bg-primary opacity-40"></div>
+                        <img src="https://img.freepik.com/free-photo/beautiful-shot-sheikh-zayed-grand-mosque-abu-dhabi-daytime_181624-51604.jpg?uid=R54603640&ga=GA1.1.76332340.1742036536&semt=ais_hybrid&w=740"
+                            alt="Mosque interior" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-xl font-heading font-semibold text-white">
+                                <span class="text-accent">Since</span> 1985
+                            </h3>
+                            <p class="text-highlight">Serving the Muslim community</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-heading font-semibold text-white mb-6">
+                        Welcome to <span class="text-accent">Al-Noor Mosque</span>
+                    </h3>
+                    <p class="text-highlight mb-6">
+                        Al-Noor Mosque was established in 1985 to serve the growing Muslim community in our city.
+                        Over the years, we have grown into a vibrant Islamic center offering daily prayers,
+                        Quran classes, Islamic education, and community services.
+                    </p>
+                    <p class="text-highlight mb-8">
+                        Our mission is to provide a welcoming space for worship, learning, and community building.
+                        We strive to promote understanding of Islam and foster good relations with all people
+                        regardless of faith or background.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-accent text-primary rounded-full p-2 mr-4 mt-1">
+                                <i class="fas fa-mosque text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-medium text-white">Daily Prayers</h4>
+                                <p class="text-highlight text-sm">All five daily prayers with jama'ah</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-accent text-primary rounded-full p-2 mr-4 mt-1">
+                                <i class="fas fa-book-quran text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-medium text-white">Quran Classes</h4>
+                                <p class="text-highlight text-sm">For children and adults of all levels</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-accent text-primary rounded-full p-2 mr-4 mt-1">
+                                <i class="fas fa-users text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-medium text-white">Community Services</h4>
+                                <p class="text-highlight text-sm">Marriage services, counseling, and more</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-16 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                    Upcoming <span class="text-accent">Events</span>
+                </h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event 1 -->
+                <div class="event-card bg-secondary rounded-xl overflow-hidden transition duration-300 hover:shadow-lg">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Friday prayer" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 left-4 bg-accent text-primary px-3 py-1 rounded-full text-xs font-medium">
+                            Weekly
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-accent text-sm mb-2">
+                            <i class="far fa-calendar mr-2"></i>
+                            Every Friday
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-white mb-2">Jumu'ah Prayer</h3>
+                        <p class="text-highlight text-sm mb-4">
+                            Join us for the weekly Friday congregational prayer with khutbah (sermon) in English and
+                            Arabic.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-accent text-sm">
+                                <i class="far fa-clock mr-1"></i> 1:30 PM
+                            </div>
+                            <a href="#" class="text-accent hover:text-white text-sm font-medium">
+                                More Info <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card bg-secondary rounded-xl overflow-hidden transition duration-300 hover:shadow-lg">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1603908030630-6b3b7014cac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Quran class" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 left-4 bg-accent text-primary px-3 py-1 rounded-full text-xs font-medium">
+                            Weekly
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-accent text-sm mb-2">
+                            <i class="far fa-calendar mr-2"></i>
+                            Every Saturday
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-white mb-2">Tajweed Class</h3>
+                        <p class="text-highlight text-sm mb-4">
+                            Learn proper Quran recitation with our qualified teachers. All levels welcome.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-accent text-sm">
+                                <i class="far fa-clock mr-1"></i> 10:00 AM
+                            </div>
+                            <a href="#" class="text-accent hover:text-white text-sm font-medium">
+                                More Info <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card bg-secondary rounded-xl overflow-hidden transition duration-300 hover:shadow-lg">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Islamic lecture" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 left-4 bg-accent text-primary px-3 py-1 rounded-full text-xs font-medium">
+                            Special
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-accent text-sm mb-2">
+                            <i class="far fa-calendar mr-2"></i>
+                            June 15, 2023
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-white mb-2">Ramadan Preparation</h3>
+                        <p class="text-highlight text-sm mb-4">
+                            Special lecture on preparing spiritually and physically for the blessed month of Ramadan.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-accent text-sm">
+                                <i class="far fa-clock mr-1"></i> 7:00 PM
+                            </div>
+                            <a href="#" class="text-accent hover:text-white text-sm font-medium">
+                                More Info <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-accent hover:text-white font-medium">
+                    View All Events <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quran Section -->
+    <section id="quran" class="py-16 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                    Online <span class="text-accent">Quran</span> Resources
+                </h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Quran Recitation -->
+                <div class="bg-primary rounded-xl p-8 text-center">
+                    <div
+                        class="bg-accent bg-opacity-20 text-accent rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-play text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-white mb-3">Quran Recitation</h3>
+                    <p class="text-highlight text-sm mb-6">
+                        Listen to beautiful recitations of the Holy Quran by various reciters from around the world.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-accent hover:text-white text-sm font-medium">
+                        Listen Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Quran Translation -->
+                <div class="bg-primary rounded-xl p-8 text-center">
+                    <div
+                        class="bg-accent bg-opacity-20 text-accent rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-book text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-white mb-3">Quran Translation</h3>
+                    <p class="text-highlight text-sm mb-6">
+                        Read the meanings of the Quran in multiple languages with explanations and tafsir.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-accent hover:text-white text-sm font-medium">
+                        Read Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Quran Classes -->
+                <div class="bg-primary rounded-xl p-8 text-center">
+                    <div
+                        class="bg-accent bg-opacity-20 text-accent rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-graduate text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-white mb-3">Online Classes</h3>
+                    <p class="text-highlight text-sm mb-6">
+                        Enroll in our online Quran classes with qualified teachers for children and adults.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-accent hover:text-white text-sm font-medium">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Daily Ayah -->
+            <div class="mt-16 bg-primary rounded-xl p-8">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-heading font-semibold text-white mb-2">
+                        <span class="text-accent">Daily</span> Ayah
+                    </h3>
+                    <p class="text-highlight text-sm">Reflect upon a verse from the Quran each day</p>
+                </div>
+                <div class="bg-secondary rounded-lg p-6">
+                    <div class="arabic-text text-2xl text-white text-center leading-loose mb-6">
+                        وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ
+                    </div>
+                    <div class="text-highlight text-center mb-4">
+                        "And whoever fears Allah - He will make for him a way out and will provide for him from where he
+                        does not expect."
+                    </div>
+                    <div class="text-accent text-center text-sm">
+                        Quran 65:2-3
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prayer Times Section -->
+    <section id="prayer" class="py-16 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                    Monthly <span class="text-accent">Prayer</span> Times
+                </h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <div class="bg-secondary rounded-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-accent text-primary p-8">
+                        <h3 class="text-xl font-heading font-semibold mb-6">Prayer Times</h3>
+                        <div class="mb-6">
+                            <label for="month-select" class="block text-sm font-medium mb-2">Select Month</label>
+                            <select id="month-select"
+                                class="w-full bg-primary text-white rounded-lg px-4 py-2 focus:outline-none">
+                                <option value="0">January</option>
+                                <option value="1">February</option>
+                                <option value="2">March</option>
+                                <option value="3">April</option>
+                                <option value="4">May</option>
+                                <option value="5">June</option>
+                                <option value="6">July</option>
+                                <option value="7">August</option>
+                                <option value="8">September</option>
+                                <option value="9">October</option>
+                                <option value="10">November</option>
+                                <option value="11">December</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="method-select" class="block text-sm font-medium mb-2">Calculation Method</label>
+                            <select id="method-select"
+                                class="w-full bg-primary text-white rounded-lg px-4 py-2 focus:outline-none">
+                                <option value="0">Muslim World League</option>
+                                <option value="1">Islamic Society of North America</option>
+                                <option value="2">Egyptian General Authority of Survey</option>
+                                <option value="3">Umm Al-Qura University, Makkah</option>
+                                <option value="4">University of Islamic Sciences, Karachi</option>
+                                <option value="5">Institute of Geophysics, University of Tehran</option>
+                            </select>
+                        </div>
+                        <button id="update-times"
+                            class="w-full bg-primary hover:bg-opacity-90 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                            Update Times
+                        </button>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="border-b border-accent border-opacity-20">
+                                        <th class="text-left text-accent font-medium pb-3">Date</th>
+                                        <th class="text-left text-accent font-medium pb-3">Fajr</th>
+                                        <th class="text-left text-accent font-medium pb-3">Sunrise</th>
+                                        <th class="text-left text-accent font-medium pb-3">Dhuhr</th>
+                                        <th class="text-left text-accent font-medium pb-3">Asr</th>
+                                        <th class="text-left text-accent font-medium pb-3">Maghrib</th>
+                                        <th class="text-left text-accent font-medium pb-3">Isha</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-accent border-opacity-10">
+                                        <td class="py-3 text-highlight">1</td>
+                                        <td class="py-3 text-white">5:30 AM</td>
+                                        <td class="py-3 text-white">6:45 AM</td>
+                                        <td class="py-3 text-white">12:30 PM</td>
+                                        <td class="py-3 text-white">3:45 PM</td>
+                                        <td class="py-3 text-white">6:20 PM</td>
+                                        <td class="py-3 text-white">8:00 PM</td>
+                                    </tr>
+                                    <tr class="border-b border-accent border-opacity-10">
+                                        <td class="py-3 text-highlight">2</td>
+                                        <td class="py-3 text-white">5:30 AM</td>
+                                        <td class="py-3 text-white">6:45 AM</td>
+                                        <td class="py-3 text-white">12:30 PM</td>
+                                        <td class="py-3 text-white">3:45 PM</td>
+                                        <td class="py-3 text-white">6:20 PM</td>
+                                        <td class="py-3 text-white">8:00 PM</td>
+                                    </tr>
+                                    <tr class="border-b border-accent border-opacity-10">
+                                        <td class="py-3 text-highlight">3</td>
+                                        <td class="py-3 text-white">5:30 AM</td>
+                                        <td class="py-3 text-white">6:45 AM</td>
+                                        <td class="py-3 text-white">12:30 PM</td>
+                                        <td class="py-3 text-white">3:45 PM</td>
+                                        <td class="py-3 text-white">6:20 PM</td>
+                                        <td class="py-3 text-white">8:00 PM</td>
+                                    </tr>
+                                    <tr class="border-b border-accent border-opacity-10">
+                                        <td class="py-3 text-highlight">4</td>
+                                        <td class="py-3 text-white">5:30 AM</td>
+                                        <td class="py-3 text-white">6:45 AM</td>
+                                        <td class="py-3 text-white">12:30 PM</td>
+                                        <td class="py-3 text-white">3:45 PM</td>
+                                        <td class="py-3 text-white">6:20 PM</td>
+                                        <td class="py-3 text-white">8:00 PM</td>
+                                    </tr>
+                                    <tr class="border-b border-accent border-opacity-10">
+                                        <td class="py-3 text-highlight">5</td>
+                                        <td class="py-3 text-white">5:30 AM</td>
+                                        <td class="py-3 text-white">6:45 AM</td>
+                                        <td class="py-3 text-white">12:30 PM</td>
+                                        <td class="py-3 text-white">3:45 PM</td>
+                                        <td class="py-3 text-white">6:20 PM</td>
+                                        <td class="py-3 text-white">8:00 PM</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-4 text-sm text-accent">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Prayer times are calculated based on your current location and selected method.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                    Mosque <span class="text-accent">Gallery</span>
+                </h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1560303253-2d1a481b01c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                        alt="Mosque interior" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Friday prayer" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Islamic lecture" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1603908030630-6b3b7014cac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Quran class" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Friday prayer" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Islamic lecture" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1603908030630-6b3b7014cac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Quran class" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1560303253-2d1a481b01c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                        alt="Mosque interior" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-accent hover:text-white font-medium">
+                    View Full Gallery <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                    Contact <span class="text-accent">Us</span>
+                </h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <div class="md:flex md:space-x-8">
+                <!-- Get in Touch Form -->
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <div class="bg-secondary rounded-xl p-8 h-full shadow-lg">
+                        <h3 class="text-xl font-heading font-semibold text-white mb-6">Get in Touch</h3>
+                        <form>
+                            <!-- Name Input -->
+                            <div class="mb-6">
+                                <label for="name" class="block text-highlight text-sm font-medium mb-2">Your
+                                    Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="w-full bg-primary border border-accent border-opacity-20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+
+                            <!-- Email Input -->
+                            <div class="mb-6">
+                                <label for="email" class="block text-highlight text-sm font-medium mb-2">Email
+                                    Address</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full bg-primary border border-accent border-opacity-20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+
+                            <!-- Subject Input -->
+                            <div class="mb-6">
+                                <label for="subject"
+                                    class="block text-highlight text-sm font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject"
+                                    class="w-full bg-primary border border-accent border-opacity-20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+
+                            <!-- Message Textarea -->
+                            <div class="mb-6">
+                                <label for="message"
+                                    class="block text-highlight text-sm font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4"
+                                    class="w-full bg-primary border border-accent border-opacity-20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit"
+                                class="w-full bg-accent hover:bg-highlight text-primary font-medium py-3 px-6 rounded-lg transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-secondary rounded-xl p-8 h-full">
+                        <h3 class="text-xl font-heading font-semibold text-white mb-6">Visit Us</h3>
+                        <!-- Embedded Google Map -->
+                        <div class="mb-8">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1347.5004595114633!2d107.57535135860805!3d-6.874379663392709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7d1b68bb875%3A0xd8fcf5a9e43bd6e4!2sUniversitas%20Logistik%20dan%20Bisnis%20Internasional%20(ULBI)!5e0!3m2!1sid!2sid!4v1746113493272!5m2!1sid!2sid"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="mb-8">
+                            <div class="flex items-start mb-6">
+                                <div class="bg-accent text-primary rounded-full p-3 mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-medium text-white mb-1">Address</h4>
+                                    <p class="text-highlight">123 Islamic Way, Cityville, ST 12345</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start mb-6">
+                                <div class="bg-accent text-primary rounded-full p-3 mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-medium text-white mb-1">Phone</h4>
+                                    <p class="text-highlight">(123) 456-7890</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-accent text-primary rounded-full p-3 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-medium text-white mb-1">Email</h4>
+                                    <p class="text-highlight">info@alnoor-mosque.org</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="font-heading font-medium text-white mb-4">Opening Hours</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between border-b border-accent border-opacity-20 pb-2">
+                                    <span class="text-highlight">Monday - Thursday</span>
+                                    <span class="text-white">5:00 AM - 10:00 PM</span>
+                                </div>
+                                <div class="flex justify-between border-b border-accent border-opacity-20 pb-2">
+                                    <span class="text-highlight">Friday</span>
+                                    <span class="text-white">5:00 AM - 11:00 PM</span>
+                                </div>
+                                <div class="flex justify-between border-b border-accent border-opacity-20 pb-2">
+                                    <span class="text-highlight">Saturday - Sunday</span>
+                                    <span class="text-white">5:00 AM - 10:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-heading font-medium text-white mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    class="bg-primary hover:bg-accent text-accent hover:text-primary w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#"
+                                    class="bg-primary hover:bg-accent text-accent hover:text-primary w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="bg-primary hover:bg-accent text-accent hover:text-primary w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="bg-primary hover:bg-accent text-accent hover:text-primary w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-mosque text-2xl text-gold mr-3"></i>
+                        <h3 class="text-xl font-bold text-gold">Al-Noor Mosque</h3>
+                    </div>
+                    <p class="text-accent mb-4">A center for faith, knowledge, and community serving Muslims in New York
+                        since 1995.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-accent hover:text-white hover:text-gold"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-accent hover:text-white hover:text-gold"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-accent hover:text-white hover:text-gold"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-accent hover:text-white hover:text-gold"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-gold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="text-accent hover:text-white hover:text-gold hover:underline-animation">Home</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-accent hover:text-white hover:text-gold hover:underline-animation">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-accent hover:text-white hover:text-gold hover:underline-animation">Prayer
+                                Times</a></li>
+                        <li><a href="#"
+                                class="text-accent hover:text-white hover:text-gold hover:underline-animation">Events</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-accent hover:text-white hover:text-gold hover:underline-animation">Donate</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-gold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="text-accent hover:text-white hover:text-gold hover:underline-animation">Quran
+                                Classes</a></li>
+                        <li><a href="#"
+                                class="text-accent hover:text-white hover:text-gold hover:underline-animation">Islamic
+                                School</a></li>
+                        <li><a href="#"
+                                class="text-accent hover:text-white hover:text-gold hover:underline-animation">Marriage
+                                Services</a></li>
+                        <li><a href="#"
+                                class="text-accent hover:text-white hover:text-gold hover:underline-animation">Funeral
+                                Services</a></li>
+                        <li><a href="#"
+                                class="text-accent hover:text-white hover:text-gold hover:underline-animation">Counseling</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-gold mb-4">Newsletter</h4>
+                    <p class="text-accent mb-4">Subscribe to our newsletter for updates on events and programs.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your Email"
+                            class="bg-primary text-accent px-4 py-2 rounded-l-lg focus:outline-none w-full">
+                        <button type="submit"
+                            class="bg-gold text-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-accent text-sm mb-4 md:mb-0">© 2025 Al-Noor Mosque. All Rights Reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#"
+                            class="text-accent hover:text-white hover:text-gold text-sm hover:underline-animation">Privacy
+                            Policy</a>
+                        <a href="#"
+                            class="text-accent hover:text-white hover:text-gold text-sm hover:underline-animation">Terms
+                            of Service</a>
+                        <a href="#"
+                            class="text-accent hover:text-white hover:text-gold text-sm hover:underline-animation">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 bg-accent text-primary w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('mobile-menu-hidden');
+            mobileMenu.classList.add('mobile-menu-visible');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('mobile-menu-visible');
+            mobileMenu.classList.add('mobile-menu-hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('mobile-menu-visible');
+                mobileMenu.classList.add('mobile-menu-hidden');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Current Date and Time
+        function updateDateTime() {
+            const now = new Date();
+
+            // Format date: Weekday, Month Day, Year
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const currentDate = now.toLocaleDateString('en-US', options);
+            document.getElementById('current-date').textContent = currentDate;
+
+            // Format time: HH:MM AM/PM
+            let hours = now.getHours();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const currentTime = `${hours}:${minutes} ${ampm}`;
+            document.getElementById('current-time').textContent = currentTime;
+
+            // Hijri date (simplified - in a real app you would use a proper Hijri date library)
+            const hijriMonths = ['Muharram', 'Safar', 'Rabi al-Awwal', 'Rabi al-Thani', 'Jumada al-Awwal',
+                'Jumada al-Thani', 'Rajab', 'Shaaban', 'Ramadan', 'Shawwal',
+                'Dhu al-Qadah', 'Dhu al-Hijjah'];
+            const hijriDate = `${now.getDate()} ${hijriMonths[now.getMonth()]} ${now.getFullYear() - 579} AH`;
+            document.getElementById('hijri-date').textContent = hijriDate;
+        }
+
+        // Update date and time every minute
+        updateDateTime();
+        setInterval(updateDateTime, 60000);
+
+        // Prayer Times - Highlight current prayer
+        function highlightCurrentPrayer() {
+            const now = new Date();
+            const currentHour = now.getHours();
+            const currentMinute = now.getMinutes();
+            const currentTime = currentHour * 60 + currentMinute;
+
+            // Sample prayer times (in real app, you would get these from an API)
+            const prayerTimes = [
+                { name: 'Fajr', time: '5:30 AM', value: 5 * 60 + 30 },
+                { name: 'Sunrise', time: '6:45 AM', value: 6 * 60 + 45 },
+                { name: 'Dhuhr', time: '12:30 PM', value: 12 * 60 + 30 },
+                { name: 'Asr', time: '3:45 PM', value: 15 * 60 + 45 },
+                { name: 'Maghrib', time: '6:20 PM', value: 18 * 60 + 20 },
+                { name: 'Isha', time: '8:00 PM', value: 20 * 60 + 0 }
+            ];
+
+            let currentPrayer = 'Fajr'; // Default to Fajr
+
+            // Determine current prayer
+            for (let i = prayerTimes.length - 1; i >= 0; i--) {
+                if (currentTime >= prayerTimes[i].value) {
+                    currentPrayer = prayerTimes[i].name;
+                    break;
+                }
+            }
+
+            // Highlight the current prayer
+            const prayerElements = document.querySelectorAll('.prayer-time');
+            prayerElements.forEach(element => {
+                element.classList.remove('prayer-active');
+                if (element.querySelector('div:first-child').textContent === currentPrayer) {
+                    element.classList.add('prayer-active');
+                }
+            });
+        }
+
+        // Update prayer times every minute
+        highlightCurrentPrayer();
+        setInterval(highlightCurrentPrayer, 60000);
+
+        // Get user location for prayer times
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+
+                    // In a real app, you would use these coordinates to fetch accurate prayer times
+                    document.getElementById('prayer-location').textContent = 'Prayer times for your location';
+                },
+                error => {
+                    console.error('Error getting location:', error);
+                    document.getElementById('prayer-location').textContent = 'Using default prayer times';
+                }
+            );
+        } else {
+            document.getElementById('prayer-location').textContent = 'Using default prayer times';
+        }
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
